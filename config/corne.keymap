@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2020 The ZMK Contributors
- *
+ a
  * SPDX-License-Identifier: MIT
  */
 
@@ -8,6 +8,20 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define LOWER 1
+#define UPPER 2
+#define TRI 3
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layers {
+            if-layers = <LOWER UPPER>;
+            then-layer = <TRI>;
+          };
+      };
+  };
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -22,7 +36,7 @@
    &kp ESC   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
    &kp LCTRL &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O    &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
-                  &kp LGUI &mo 1 &kp SPACE  &kp SPACE &mo 2 &kp RALT
+                  &kp LGUI &mo LOWER &kp SPACE  &kp SPACE &mo UPPER &kp RALT
                         >;
                 };
                 lower_layer {

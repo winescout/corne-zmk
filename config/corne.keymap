@@ -66,8 +66,6 @@
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
-        };
-};
 
                 tri_layer {
 // -----------------------------------------------------------------------------------------
@@ -82,5 +80,8 @@
                           	        &kp LGUI     &trans       &kp RET      &kp SPACE  &trans   &kp RALT
                         >;
                 };
+
+        };
+};
 
 

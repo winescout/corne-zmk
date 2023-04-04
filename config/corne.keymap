@@ -29,12 +29,12 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U  |  Y  |  ;:  | BKSP |
-// | CTRL |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  |  '   |
+// | CTRL |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  |  RET  |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  | SHFT  |
 //                    | CMD | LWR | SPACE|   | SPACE | RSE  | OPT |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-   &kp LCTRL &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O    &kp SQT
+   &kp LCTRL &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O    &kp RET
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
                   &kp LGUI &mo LOWER &kp SPACE  &kp SPACE &mo UPPER &kp RALT
                         >;
@@ -42,12 +42,12 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     | RET  |
+// |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |  '" | RET  |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     | SHFT |
 //                    | CMD |     | ENT |   | SPACE |     | OPT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &trans     &trans       &trans       &trans       &trans       &trans         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &kp RET
+   &trans     &trans       &trans       &trans       &trans       &trans         &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT&kp RET
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &kp RSHIFT
                           	        &kp LGUI     &trans       &kp RET            &kp SPACE  &trans   &kp RALT
                         >;
@@ -55,12 +55,12 @@
 
                 rsise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// |  ~   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  | RET  |
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | CMD |     | SPC |   | ENT |     | OPT |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp RET
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
